@@ -105,16 +105,22 @@ OpenCV的库中已经有很完善的根据模板来识别给定图像中的位�
 
 此前已经提到，**过长的反应距离**带来的表现就是basket过早移动、触碰到上个本该躲避的物体，**过短的反应距离**表现为basket用篮子的侧边而不是上沿“撞击”道具的侧边来接到、说明即将错过。但是在不同的游戏时间内，不同的道具下落速度对应了不同的最优反应距离，一个自然的想法是用某种函数来拟合"dits-t"的变化曲线，但在缺乏数据的情况下只能人工掐表进行瞪眼调试，最终采用了**分段线性插值**的方法确定了最高能打到11000的拟合函数，也是最终刷榜到第四的方法。
 
+<div align="center">
+<img width="200" alt="1739456625(2)" src="https://github.com/user-attachments/assets/66a46fbc-da6f-4abf-bf53-af611226f6cb" />
+</div>
 
-以下提供一个最终版本的方法示例结果，没有使用最高分的打法过程是因为随机性导致每次进行游戏前并不知道能不能打到最高分，所以一直没有录制到。
+
+
+以下提供一个最终版本的方法完整地刷到6000+分的示例结果：
 
 
 <div align="center">
-    <a href="https://youtu.be/vt5fpE0bzSY">
-        <img src="https://github.com/user-attachments/assets/128c0ecb-b3f1-4e50-9553-23c5cd92bf30" width="700" alt="Watch the video">
+    <a href="https://youtu.be/mw8AecRKiig">
+        <img src="https://github.com/user-attachments/assets/f4b7224f-39e5-4fd4-a9d7-16b12f71afaf" width="700" alt="Watch the video">
     </a>
 </div>
 
+没有使用最高分的打法过程是因为随机性导致每次进行游戏前并不知道能不能打到最高分，所以一直没有录制到。
 
 ### 4.6 未完成的优化展望
 
